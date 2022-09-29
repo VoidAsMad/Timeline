@@ -1,8 +1,8 @@
-from Timeline.clinet import Timeline
+from client import Timeline
 import os
 
-time = Timeline()
 
+time = Timeline()
 while True:
 
     year: str = input(
