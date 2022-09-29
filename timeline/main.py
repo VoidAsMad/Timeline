@@ -1,4 +1,4 @@
-from Timeline.main import Timeline
+from Timeline.clinet import Timeline
 import os
 
 time = Timeline()
