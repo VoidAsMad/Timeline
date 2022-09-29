@@ -1,4 +1,5 @@
 from client import Timeline
+import clipboard
 import os
 
 
@@ -6,7 +7,7 @@ time = Timeline()
 while True:
 
     year: str = input(
-        f"\033[37m---------------\n\033[32m연도를 입력해주세요! ex) 1976\n\033[37m---------------\n> "
+        "\033[37m ---------------\n\033[32m연도를 입력해주세요! ex) 1976\n\033[37m---------------\n> "
     )
     text: str = input(
         "\033[37m---------------\n\033[32m데이터를 입력해주세요!\n\033[37m---------------\n> "
@@ -29,5 +30,6 @@ while True:
     else:
         pass
 
-print(time._return())
+print(str(time._return()) + "\n \n출력된 내용은 자동으로 저장됩니다.")
+clipboard.copy(str(time._return()))
 os.system("pause")
